@@ -1,0 +1,127 @@
+@charset "UTF-8";
+main .products, main .banner p, main .banner h2 {
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  font-family: "Mogra", Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(28, 37, 47);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header > img {
+  width: clamp(80px, 10vw, 160px);
+}
+header i img {
+  width: clamp(20px, 4vw, 50px);
+  cursor: pointer;
+}
+
+main .banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .banner img {
+  width: 100vw;
+  position: relative;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 28%;
+     object-position: 100% 28%;
+}
+main .banner h2 {
+  position: absolute;
+  font-family: "Rubik Dirt", system-ui, Arial, Helvetica, sans-serif;
+  width: 100%;
+  font-weight: 100;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  margin: 2%;
+  text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
+  letter-spacing: 0.5rem;
+}
+main .banner p {
+  font-size: 2rem;
+}
+main .products {
+  margin: 0 auto;
+  padding: 2% 17vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-image: url(../img/FondoWeb3.png);
+  background-size: 100vw 100vw;
+}
+main .products img {
+  width: clamp(90px, 12vw, 200px);
+  margin: 0;
+  border-radius: 25%;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+main .products h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0;
+}
+main .products p {
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+main .cart {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  background-color: rgb(238, 253, 255);
+  height: 100%;
+  position: fixed;
+  right: -100%; /*    SE UTILIZARÁ JAVA PARA LA SECCIÓN DEL CARRITO QUE SE OCULTARÁ    */
+  top: 1vh;
+  box-shadow: -19px -1px 22px -15px rgba(245, 197, 6, 0.796);
+  -moz-column-gap: 1px;
+       column-gap: 1px;
+  background-image: url("../img/banner2.png");
+}
+main .cart h2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: clamp(8px, 0.6rem, 1rem);
+  font-weight: 600;
+}
+main .cart div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  justify-content: space-between;
+  padding: 15px;
+}
+main .cart div img {
+  width: clamp(50px, 5.6em, 80px);
+  border-radius: 40%;
+}
+main .cart div p {
+  font-weight: 300;
+  font-size: clamp(10px, 1rem, 20px);
+}
+main .cart div i img {
+  width: clamp(20px, 3em, 60px);
+  cursor: pointer;
+}/*# sourceMappingURL=SASS.css.map */
