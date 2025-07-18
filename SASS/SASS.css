@@ -20,6 +20,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 header > img {
   width: clamp(80px, 10vw, 160px);
@@ -54,6 +55,11 @@ main .banner h2 {
   text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
   letter-spacing: 0.5rem;
 }
+@media screen and (max-width: 70rem) {
+  main .banner h2 {
+    font-size: 1.5rem;
+  }
+}
 main .banner p {
   font-size: 2rem;
 }
@@ -68,6 +74,19 @@ main .products {
   grid-template-rows: repeat(1, minmax(100px, 1fr));
   justify-items: center;
   row-gap: 10px;
+}
+@media screen and (max-width: 70rem) {
+  main .products {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+main .products div {
+  align-items: center;
+}
+@media screen and (max-width: 70rem) {
+  main .products div img {
+    width: clamp(150px, 6rem, 600px);
+  }
 }
 main .cart {
   width: 30vw;

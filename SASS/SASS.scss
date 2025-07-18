@@ -17,6 +17,10 @@ $fontStyle:"Mogra", Arial, Helvetica, sans-serif;
     flex-direction: $direction;    
 }
 
+@mixin littlescreen{
+    @media screen and (max-width: 70rem) {@content};
+}
+
 body {
     width: 100%;
     font-size: 15px;
@@ -31,6 +35,7 @@ header{
 
     @include Elemento(100%,flex ,row);
     justify-content:space-between;
+    align-items: center;
     > img {
         width: clamp(80px,10vw,160px);
     }
@@ -62,6 +67,9 @@ main{
             width: 100%;    
             font-weight:100;
             font-size:2.5rem;
+            @include littlescreen{
+                font-size: 1.5rem;
+            }
             color: rgb(0,0,0);
             margin: 2%; 
             text-shadow:-0.06rem -0.06rem  0 rgb(255, 179, 0), 0.06rem 0.06rem  0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
@@ -84,8 +92,20 @@ main{
         display: grid;
         grid-template-columns: repeat(3,minmax(200px,1fr));
         grid-template-rows: repeat(1,minmax(100px,1fr));
-        justify-items: center;
+        justify-items: center;        
         row-gap: 10px;
+        @include littlescreen{
+            grid-template-columns: minmax(200px,1fr);
+        }
+        div{
+            align-items: center;
+            img{
+                @include littlescreen{
+                    width: clamp(150px,6rem,600px);
+
+                }
+            }
+        }
     }
     .cart{
         @include Elemento(30vw,flex,column );
@@ -102,7 +122,8 @@ main{
         h2{
             @include Elemento(100%,flex ,row);
             font-size: clamp(8px,0.6rem,1rem);
-            font-weight: 600;                
+            font-weight: 600;
+                            
         }
         div{
             @include Elemento(100%,flex ,row);
