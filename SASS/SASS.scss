@@ -78,28 +78,14 @@ main{
         @extend %elementoGral;
         margin: 0 auto;
         padding: 2% 17vw;
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
         background-image: url(../img/FondoWeb3.png);
         background-size: 100vw 100vw;
-        
-        img{
-            width: clamp(90px,12vw,200px);
-            margin: 0;
-            border-radius: 25%;
-            margin-top: 2rem;
-            cursor: pointer;
-        }
-        h3{
-            font-weight: 500;
-            font-size: 1.1rem;
-            margin: 0;
-        }
-        p{
-            font-weight: 300;
-            font-size: 1rem;
-            margin: 0;
-        }
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(200px,1fr));
+        grid-template-rows: repeat(1,minmax(100px,1fr));
+        justify-items: center;
+        row-gap: 10px;
     }
     .cart{
         @include Elemento(30vw,flex,column );
