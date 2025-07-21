@@ -20,6 +20,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 header > img {
   width: clamp(80px, 10vw, 160px);
@@ -54,33 +55,38 @@ main .banner h2 {
   text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
   letter-spacing: 0.5rem;
 }
+@media screen and (max-width: 70rem) {
+  main .banner h2 {
+    font-size: 1.5rem;
+  }
+}
 main .banner p {
   font-size: 2rem;
 }
 main .products {
   margin: 0 auto;
   padding: 2% 17vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   background-image: url(../img/FondoWeb3.png);
   background-size: 100vw 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: repeat(1, minmax(100px, 1fr));
+  justify-items: center;
+  row-gap: 10px;
 }
-main .products img {
-  width: clamp(90px, 12vw, 200px);
-  margin: 0;
-  border-radius: 25%;
-  margin-top: 2rem;
-  cursor: pointer;
+@media screen and (max-width: 70rem) {
+  main .products {
+    grid-template-columns: minmax(200px, 1fr);
+  }
 }
-main .products h3 {
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin: 0;
+main .products div {
+  align-items: center;
 }
-main .products p {
-  font-weight: 300;
-  font-size: 1rem;
-  margin: 0;
+@media screen and (max-width: 70rem) {
+  main .products div img {
+    width: clamp(150px, 6rem, 600px);
+  }
 }
 main .cart {
   width: 30vw;
