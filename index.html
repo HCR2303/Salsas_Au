@@ -12,17 +12,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="CSS/styles.css">--> <!--Esta es la ruta de los estilos de CSS-->
     <link rel="stylesheet" href="SASS/SASS.css">
+    <script src="JS/functions.js" defer></script>
     <title>Salsas Au</title>
 </head>
 <body>
     <header class="header">
         
         <i>
-            <img src="img/menu.svg" alt="img menu" class="header__icon">
+            <img src="img/menu.svg" alt="img menu" class="header__iconMenu" data-target="menu">
         </i>
         <img src="img/Salsas Au Logo.svg" alt="salas Au logo" class="header__logo">
         <i>
-            <img src="img/Carrito.svg" alt="img carrito" class="header__icon">
+            <img src="img/Carrito.png" alt="img carrito" class="header__iconCart" data-target="cart">
+            <p></p>
         </i>
     </header>
     <main>
@@ -34,69 +36,99 @@
 
         <section class="products">
             
-                <div class="card" style="width: 18rem;">
+                <div class="card1" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha Picor: BAJO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$100.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Tradicional</span> Picor: <span class="picor">BAJO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card2" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha Picor: MEDIO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$100.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Tradicional</span> Picor: <span class="picor">MEDIO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card3" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha Picor: ALTO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$100.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Tradicional</span> Picor: <span class="picor">ALTO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
             
             
-                <div class="card" style="width: 18rem;">
+                <div class="card4" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha <strong>Premium</strong> Picor: BAJO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$125.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Premium</span> Picor: <span class="picor">BAJO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card5" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha <strong>Premium</strong> Picor: MEDIO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$125.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Premium</span> Picor: <span class="picor">MEDIO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card6" style="width: 18rem;">
                     <img src="img/Salsa chica.jpg" class="card-img-top" alt="salsa chica">
                     <div class="card-body">
-                        <h5 class="card-title">Salsa de 230 g</h5>
-                        <p class="card-text">Salsa macha <strong>Premium</strong> Picor: ALTO</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <h5 class="card-title">Salsa de <span class="cantidad">230 g</span> <span class="precio">$125.00</span></h5>
+                        <p class="card-text">Salsa macha <span class="tipo">Premium</span> Picor: <span class="picor">ALTO</span></p>
+                        <a class="btn btn-primary">Comprar</a>
                     </div>                
                 </div>
             
             
         </section>
 
-        <section class="cart">
-            <h2>CARRITO</h2>
-            <div class="cart__container">
-                <img src="img/Salsa chica.jpg" alt="salsa especial" class="cart__img">
-                <p class="cart__product">Salsa</p>
-                <p class="cart__price">$ 100.00 mnx</p>                
-                <i>
-                    <img src="img/CarritoMenos.svg" alt="Icono quitar" class="cart__icondelete">
+        <section class="menu oculted">
+
+            <div class="menu__banner">
+                <h2>MENU</h2>
+                <i class="menuClose">
+                    <img src="img/crossIcon.png" alt="img cross">
                 </i>
+            </div>
+
+            <div class="menu__container">
+
+                <ul class="container__list">
+                    <li>Productos</li>
+                    <li>Mercancía Oficial</li>
+                    <li>Ofertas</li>
+                    <li>Contacto</li>
+                </ul>
+                
+            </div>
+
+        </section>
+
+        <section class="cart oculted">
+            <div class="cart__banner">
+                <h2>CARRITO</h2>
+                <i class="cartClose">
+                    <img src="img/crossIcon.png" alt="img cross">
+                </i>
+            </div>
+
+            <div class="cart__container">
+                <div>
+                    <img class="cart__img" src="img/Salsa chica.jpg" alt="salsa especial">
+                    <p class="cart__product">Salsa</p>
+                    <p class="cart__price">$ 100.00 mxn</p>                
+                    <i>
+                        <img src="img/Eliminar.png" alt="Icono quitar" class="cart__iconDelete">
+                    </i>
+                </div>
             </div>
 
         </section>
