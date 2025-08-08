@@ -64,6 +64,9 @@ header i p {
     right: -30px;
   }
 }
+header i p.none {
+  display: none;
+}
 
 main .banner {
   width: 100%;
@@ -71,28 +74,31 @@ main .banner {
   flex-direction: column;
 }
 main .banner img {
-  width: 100vw;
+  width: 100%;
   position: relative;
   height: 100px;
+  overflow-x: hidden;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 100% 28%;
      object-position: 100% 28%;
 }
 main .banner h2 {
-  position: absolute;
+  position: relative;
   font-family: "Rubik Dirt", system-ui, Arial, Helvetica, sans-serif;
+  left: 50%; /* Mueve el elemento 50% hacia la derecha */
+  transform: translate(-50%, -155%);
   width: 100%;
   font-weight: 100;
   font-size: 2.5rem;
   color: rgb(0, 0, 0);
-  margin: 2%;
-  text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
+  text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -3px -2px 0 rgb(175, 20, 12);
   letter-spacing: 0.5rem;
 }
 @media screen and (max-width: 70rem) {
   main .banner h2 {
     font-size: 1.5rem;
+    transform: translate(-50%, -140%);
   }
 }
 main .banner p {
@@ -189,6 +195,8 @@ main .cart {
   width: 30vw;
   display: flex;
   flex-direction: column;
+  z-index: 3;
+  overflow-y: scroll;
   color: rgb(0, 0, 0);
   background-color: rgb(238, 253, 255);
   height: 100%;
@@ -263,7 +271,28 @@ main .cart .cart__container > div p {
   margin: 0;
   padding: 0;
 }
+main .cart .cart__container > div i {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 main .cart .cart__container > div i img {
   width: clamp(20px, 2em, 60px);
   cursor: pointer;
+}
+main .cart .cart__container > div i input {
+  width: clamp(20px, 2em, 60px);
+  font-size: 1rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+main .cart .cart__container > div i input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .cart .cart__container > div i input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }/*# sourceMappingURL=SASS.css.map */

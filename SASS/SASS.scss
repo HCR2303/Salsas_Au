@@ -74,6 +74,9 @@ header{
                 top: -40px;
                 right: -30px;
             }
+            &.none{
+                display: none;
+            }
         }
     }
 }
@@ -81,28 +84,30 @@ header{
 main{
     .banner{
         @include Elemento(100%,flex ,column);
-        
+                
         img{
-            width: 100vw;
+            width: 100%;
             position: relative;
             height: 100px;
-            object-fit: cover;
-            
+            overflow-x: hidden;
+            object-fit: cover;            
             object-position: 100% 28%;
         }
         h2{
-            position: absolute;
+            position: relative;
             font-family: $fontBanner;
+            left: 50%; /* Mueve el elemento 50% hacia la derecha */
+            transform: translate(-50%, -155%);            
             @extend %elementoGral;
             width: 100%;    
             font-weight:100;
             font-size:2.5rem;
             @include littlescreen{
                 font-size: 1.5rem;
+                transform: translate(-50%, -140%);  
             }
-            color: rgb(0,0,0);
-            margin: 2%; 
-            text-shadow:-0.06rem -0.06rem  0 rgb(255, 179, 0), 0.06rem 0.06rem  0 rgb(255, 179, 0), -0.3rem -0.3rem 0 rgb(175, 20, 12);
+            color: rgb(0,0,0);             
+            text-shadow:-0.06rem -0.06rem  0 rgb(255, 179, 0), 0.06rem 0.06rem  0 rgb(255, 179, 0), -3px -2px 0 rgb(175, 20, 12);
             letter-spacing: 0.5rem;
                          
         }
@@ -215,7 +220,9 @@ main{
     
     .cart {
         
-        @include Elemento(30vw,flex,column );
+        @include Elemento(30vw,flex,column);
+        z-index: 3;
+        overflow-y: scroll;
         color: rgb(0,0,0);
         background-color: rgb(238, 253, 255);        
         height: 100%;
@@ -232,8 +239,7 @@ main{
         
 
         &.oculted{
-            display: none;
-            
+            display: none;            
         }
 
         @include littlescreen{            
@@ -299,9 +305,28 @@ main{
                 }
 
                 i{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
                     img{
                         width: clamp(20px,2em,60px);
                         cursor: pointer;
+                    }
+                    input{
+                        width: clamp(20px,2em,60px);
+                        font-size: 1rem;
+                        text-align: center;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        &::-webkit-inner-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        &::-webkit-outer-spin-button{
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
                     }
                 }
             }
