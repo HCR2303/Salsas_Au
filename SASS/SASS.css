@@ -33,7 +33,7 @@ header i img {
   padding-right: 10px;
   cursor: pointer;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   header i img {
     width: 3rem;
   }
@@ -55,7 +55,7 @@ header i p {
   top: -73px;
   right: -56px;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   header i p {
     width: 0.8rem;
     height: 0.8rem;
@@ -84,10 +84,10 @@ main .banner img {
      object-position: 100% 28%;
 }
 main .banner h2 {
-  position: relative;
+  position: absolute;
   font-family: "Rubik Dirt", system-ui, Arial, Helvetica, sans-serif;
   left: 50%; /* Mueve el elemento 50% hacia la derecha */
-  transform: translate(-50%, -155%);
+  transform: translate(-50%, 45%);
   width: 100%;
   font-weight: 100;
   font-size: 2.5rem;
@@ -95,10 +95,16 @@ main .banner h2 {
   text-shadow: -0.06rem -0.06rem 0 rgb(255, 179, 0), 0.06rem 0.06rem 0 rgb(255, 179, 0), -3px -2px 0 rgb(175, 20, 12);
   letter-spacing: 0.5rem;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .banner h2 {
     font-size: 1.5rem;
-    transform: translate(-50%, -140%);
+    transform: translate(-50%, 35%);
+  }
+}
+@media screen and (max-width: 500px) {
+  main .banner h2 {
+    font-size: 1.5rem;
+    transform: translate(-50%, 9%);
   }
 }
 main .banner p {
@@ -117,7 +123,7 @@ main .products {
   row-gap: 30px;
   background-color: rgb(28, 37, 47);
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .products {
     grid-template-columns: minmax(200px, 1fr);
   }
@@ -128,7 +134,7 @@ main .products div {
 main .products div p {
   margin: 0;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .products div img {
     width: clamp(150px, 6rem, 600px);
   }
@@ -156,7 +162,7 @@ main .menu {
 main .menu.oculted {
   display: none;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .menu {
     width: 100%;
     bottom: -9vh;
@@ -172,7 +178,7 @@ main .menu .menu__banner {
   margin-right: 0.5rem;
   margin-top: 0.5rem;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .menu .menu__banner {
     width: 55%;
     margin-right: 1rem;
@@ -216,7 +222,7 @@ main .cart {
 main .cart.oculted {
   display: none;
 }
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   main .cart {
     width: 100%;
     bottom: -9vh;

@@ -54,10 +54,8 @@ selectedProducts.addEventListener("click",(evento)=>{//se utilizó la delegació
         let numero=parseInt(contadorMenos.value);
         numero--; 
         contadorMenos.value=numero;      
-        if (contadorMenos.value==0){
-            console.log("si está el if")
-            const elemento=contadorMenos.closest("div");
-            console.log(elemento)            
+        if (contadorMenos.value==0){           
+            const elemento=contadorMenos.closest("div");                   
             elemento.remove();
         }        
     }else if(evento.target.classList.contains("cart__iconMas")){
@@ -149,11 +147,6 @@ function addToCart(product) {
         selectedProducts.appendChild(divProducto);
     }     
 }
-
-//
-//if (selectedProducts.childElementCount!=0){
-    
-//}
 
 //Acción para botones de comprar
 buyButtons.forEach(button=>{

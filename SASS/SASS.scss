@@ -18,7 +18,11 @@ $fontStyle:"Mogra", Arial, Helvetica, sans-serif;
 }
 
 @mixin littlescreen{
-    @media screen and (max-width: 70rem) {@content};
+    @media screen and (min-width:501px) and (max-width:1000px) {@content};
+}
+
+@mixin minumscreen{
+    @media screen and (max-width: 500px) {@content};
 }
 
 body {
@@ -94,21 +98,26 @@ main{
             object-position: 100% 28%;
         }
         h2{
-            position: relative;
+            position: absolute;
             font-family: $fontBanner;
             left: 50%; /* Mueve el elemento 50% hacia la derecha */
-            transform: translate(-50%, -155%);            
+            transform: translate(-50%, 45%);            
             @extend %elementoGral;
             width: 100%;    
             font-weight:100;
             font-size:2.5rem;
             @include littlescreen{
                 font-size: 1.5rem;
-                transform: translate(-50%, -140%);  
+                transform: translate(-50%, 35%);                
+            }
+            @include minumscreen{ 
+                font-size: 1.5rem;               
+                transform: translate(-50%, 9%);                
             }
             color: rgb(0,0,0);             
             text-shadow:-0.06rem -0.06rem  0 rgb(255, 179, 0), 0.06rem 0.06rem  0 rgb(255, 179, 0), -3px -2px 0 rgb(175, 20, 12);
             letter-spacing: 0.5rem;
+
                          
         }
         p{
