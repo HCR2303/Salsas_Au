@@ -38,6 +38,11 @@ header i img {
     width: 3rem;
   }
 }
+@media screen and (max-width: 500px) {
+  header i img {
+    width: 3rem;
+  }
+}
 header i p {
   width: 1.2rem;
   height: 1.2rem;
@@ -56,6 +61,15 @@ header i p {
   right: -56px;
 }
 @media screen and (min-width: 501px) and (max-width: 1000px) {
+  header i p {
+    width: 0.8rem;
+    height: 0.8rem;
+    font-size: 0.5rem;
+    top: -40px;
+    right: -30px;
+  }
+}
+@media screen and (max-width: 500px) {
   header i p {
     width: 0.8rem;
     height: 0.8rem;
@@ -128,6 +142,11 @@ main .products {
     grid-template-columns: minmax(200px, 1fr);
   }
 }
+@media screen and (max-width: 500px) {
+  main .products {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
 main .products div {
   align-items: center;
 }
@@ -135,6 +154,11 @@ main .products div p {
   margin: 0;
 }
 @media screen and (min-width: 501px) and (max-width: 1000px) {
+  main .products div img {
+    width: clamp(150px, 6rem, 600px);
+  }
+}
+@media screen and (max-width: 500px) {
   main .products div img {
     width: clamp(150px, 6rem, 600px);
   }
@@ -169,6 +193,13 @@ main .menu.oculted {
     box-shadow: none;
   }
 }
+@media screen and (max-width: 500px) {
+  main .menu {
+    width: 100%;
+    bottom: -9vh;
+    box-shadow: none;
+  }
+}
 main .menu .menu__banner {
   width: 70%;
   display: flex;
@@ -179,6 +210,12 @@ main .menu .menu__banner {
   margin-top: 0.5rem;
 }
 @media screen and (min-width: 501px) and (max-width: 1000px) {
+  main .menu .menu__banner {
+    width: 55%;
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
   main .menu .menu__banner {
     width: 55%;
     margin-right: 1rem;
@@ -223,6 +260,13 @@ main .cart.oculted {
   display: none;
 }
 @media screen and (min-width: 501px) and (max-width: 1000px) {
+  main .cart {
+    width: 100%;
+    bottom: -9vh;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 500px) {
   main .cart {
     width: 100%;
     bottom: -9vh;

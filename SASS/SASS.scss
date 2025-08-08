@@ -53,6 +53,9 @@ header{
             cursor: pointer;
             @include littlescreen{
                 width: 3rem;
+            }
+            @include minumscreen{
+                width: 3rem;
             }            
         }
         p{
@@ -72,6 +75,13 @@ header{
             top: -73px;
             right: -56px;
             @include littlescreen{
+                width: .8rem;
+                height: .8rem;
+                font-size: .5rem;
+                top: -40px;
+                right: -30px;
+            }
+            @include minumscreen{
                 width: .8rem;
                 height: .8rem;
                 font-size: .5rem;
@@ -143,6 +153,9 @@ main{
         @include littlescreen{
             grid-template-columns: minmax(200px,1fr);
         }
+        @include minumscreen{
+            grid-template-columns: minmax(200px,1fr);
+        }
         
         div{
 
@@ -154,6 +167,9 @@ main{
             img{
 
                 @include littlescreen{
+                    width: clamp(150px,6rem,600px);
+                }
+                @include minumscreen{
                     width: clamp(150px,6rem,600px);
                 }
             }
@@ -188,11 +204,20 @@ main{
             bottom:-9vh;
             box-shadow: none;
         }
+        @include minumscreen{            
+            width: 100%;
+            bottom:-9vh;
+            box-shadow: none;
+        }
               
 
         .menu__banner {
             width: 70%;
             @include littlescreen{
+                width: 55%;
+                margin-right: 1rem;
+            }
+            @include minumscreen{
                 width: 55%;
                 margin-right: 1rem;
             }
@@ -252,6 +277,11 @@ main{
         }
 
         @include littlescreen{            
+            width: 100%;
+            bottom:-9vh;
+            box-shadow: none;
+        }
+        @include minumscreen{            
             width: 100%;
             bottom:-9vh;
             box-shadow: none;
